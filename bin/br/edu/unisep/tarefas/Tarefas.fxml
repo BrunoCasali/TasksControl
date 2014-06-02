@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="406.0" prefWidth="353.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.edu.unisep.tarefas.TarefasController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutY="21.0" text="Descrição:" AnchorPane.leftAnchor="14.0" />
+    <TextField fx:id="txtDescricao" layoutY="14.0" prefHeight="29.0" prefWidth="248.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="14.0" />
+    <Label layoutX="40.0" layoutY="52.0" text="Data:" />
+    <TextField fx:id="txtData" layoutY="45.0" onAction="#salvar" prefHeight="29.0" prefWidth="147.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="115.0" />
+    <Button layoutY="87.0" mnemonicParsing="false" onAction="#salvar" prefWidth="114.0" text="Salvar" AnchorPane.leftAnchor="224.0" AnchorPane.rightAnchor="15.0" />
+    <TableView fx:id="tabTarefas" layoutY="125.0" prefHeight="209.0" prefWidth="325.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <columns>
+        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="122.0" text="Descrição" />
+        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="107.0" text="Data" />
+        <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="94.0" text="Status" />
+      </columns>
+    </TableView>
+    <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="346.0" prefHeight="48.0" prefWidth="325.0" spacing="10.0">
+      <children>
+        <Button fx:id="btnIniciar" disable="true" mnemonicParsing="false" onAction="#iniciarTarefa" text="Iniciar" />
+        <Button fx:id="btnParalizar" disable="true" mnemonicParsing="false" onAction="#paralizarTarefa" text="Paralizar" />
+        <Button fx:id="btnCancelar" disable="true" mnemonicParsing="false" onAction="#cancelarTarefa" text="Cancelar" />
+        <Button fx:id="btnFinalizar" disable="true" mnemonicParsing="false" onAction="#finalizarTarefa" text="Finalizar" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>
